@@ -1,0 +1,3 @@
+bnccv:
+    resource: "@BNCCVBundle/Resources/config/routing.yml"
+    prefix:   /

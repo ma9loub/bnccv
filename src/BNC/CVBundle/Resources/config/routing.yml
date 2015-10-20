@@ -1,0 +1,15 @@
+bnccv_home:
+    path:     /home
+    defaults: { _controller: BNCCVBundle:Default:index }
+
+bnccv_cv:
+    path:     /cv
+    defaults: { _controller: BNCCVBundle:Cv:index }
+
+bnccv_about:
+    path:     /about
+    defaults: { _controller: BNCCVBundle:About:index }
+
+bnccv_contact:
+    path:     /contact
+    defaults: { _controller: BNCCVBundle:Contact:index }
