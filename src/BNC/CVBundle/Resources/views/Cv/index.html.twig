@@ -1,7 +1,62 @@
-{# src/BNC/CVBundle/Resources/views/cv/index.html.twig #}
+{# src/BNC/CVBundle/Resources/views/Cv/index.html.twig #}
 
 {% extends "BNCCVBundle::layout.html.twig" %}
 
 {% block container %}
-Timeline
+
+  <div class="cv-links">
+    <div>
+      <a target="_blank" href="{{ asset('bundles/cv/doc/cv_clement_balay.pdf') }}">
+        <img src="{{ asset('bundles/cv/img/pdf.png') }}"/> CV au format PDF
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="{{ asset('bundles/cv/doc/cv_clement_balay.doc') }}">
+        <img src="{{ asset('bundles/cv/img/word.png') }}"/> CV au format WORD
+      </a>
+    </div>
+  </div>
+
+  <section id="cd-timeline" class="cd-container">
+  </section> <!-- cd-timeline -->
+  
+  
+  <script id="cv-template" type="text/x-handlebars-template">
+  {% raw %}
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img cd-{{type}}">
+        <div class="glyphicon glyphicon-{{type}}" aria-hidden="true"></div>
+      </div> <!-- cd-timeline-img -->
+      <div class="cd-timeline-content">
+        <h2>{{title}}</h2>
+        <h4>{{subtitle}}</h4>
+        {{#if photo_url}}
+        <div>
+          <img width="100%" src="{{photo_url}}" alt="{{caption}}" class="img-rounded" />
+        </div>
+        {{/if}}
+        {{#if data.body}}
+        <p>{{data.body}}</p>
+        {{/if}}
+        {{#if data.steps}}
+        <p>
+          <ul>
+          {{#each data.steps}}
+            <li>{{this}}</li>
+          {{/each}}
+          </ul>
+        </p>
+        {{/if}}
+        {{#if more}}
+        <a target="_blank" href="{{more}}" class="cd-read-more">En savoir plus</a>
+        {{/if}}
+        <span class="cd-date">{{date}}</span>
+      </div> <!-- cd-timeline-content -->
+    </div> <!-- cd-timeline-block -->
+    {% endraw %}
+  </script>
+  
+<script>
+installTimeline("{{ asset('bundles/cv/toto.json') }}");
+</script>
 {% endblock %}

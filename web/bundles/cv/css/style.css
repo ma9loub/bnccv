@@ -1,0 +1,21 @@
+/* Permet de gérer un menu statique */
+body {
+  padding-top: 70px;
+}
+
+/* Permet d'avoir un tableau bootstrap sans bordures pour la page Exp */
+.borderless, .borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+  border: none;
+}
+
+/* Gestion du tableau dans la page Exp */
+table .cellName {
+	width: 1px;
+	font-weight: bolder;
+}
+
+/* Gestion des liens des cv pdf et word dans la page CV */
+.cv-links > div {
+	font-size: 11px;
+	padding: 3px;
+}
