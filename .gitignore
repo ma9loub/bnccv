@@ -10,3 +10,4 @@
 /vendor/
 #/web/bundles/
 /web/bundles/cv/toto.json
+/web/bundles/cv/doc/*
