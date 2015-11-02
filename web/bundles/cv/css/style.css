@@ -10,8 +10,15 @@ body {
 
 /* Gestion du tableau dans la page Exp */
 table .cellName {
-	width: 1px;
-	font-weight: bolder;
+  width: 1px;
+}
+
+/* Gestion du tableau dans la page Exp */
+table .cellTitle {
+  font-size: 18px;
+  text-decoration: underline;
+  padding-top: 30px;
+  font-weight: bolder;
 }
 
 /* Gestion des liens des cv pdf et word dans la page CV */

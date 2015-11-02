@@ -5,16 +5,20 @@
 {% block container %}
 
   <div class="cv-links">
+    {% if cv_pdf is defined %}
     <div>
-      <a target="_blank" href="{{ asset('bundles/cv/doc/cv_clement_balay.pdf') }}">
+      <a target="_blank" href="{{cv_pdf}}">
         <img src="{{ asset('bundles/cv/img/pdf.png') }}"/> CV au format PDF
       </a>
     </div>
+    {% endif %}
+    {% if cv_doc is defined %}
     <div>
-      <a target="_blank" href="{{ asset('bundles/cv/doc/cv_clement_balay.doc') }}">
+      <a target="_blank" href="{{cv_doc}}">
         <img src="{{ asset('bundles/cv/img/word.png') }}"/> CV au format WORD
       </a>
     </div>
+    {% endif %}
   </div>
 
   <section id="cd-timeline" class="cd-container">

@@ -1,9 +1,8 @@
 biznetcom
 =========
 
-A Symfony project created on October 18, 2015, 10:04 am.
-
-* Utilise Bootstrap pour le style sobre mais clair
+* Symfony2 pour le framework PHP
+* Utilise Bootstrap pour le style
 * un projet TimeLine opensource pour la page du CV
 * jQuery pour toute la partie JS
 * modernizr pour la timeline
@@ -19,38 +18,53 @@ BNCCV c'est :
 * Une page de Contact
 
 # Les données
-Pour vos données du CV et d'expérience il y a une structure JSON à placer dans le dossier web/bundles/cv/ nommée toto.json
-* Il existe 3 types d'expérience : 
+Pour les données de la présentation générale, du CV et de l'expérience il y a une structure JSON à placer dans le dossier web/bundles/cv/ nommée toto.json
+* Pour la donnée cv->type, Il existe 3 types d'expérience : 
   * picture (pour les voyages)
   * wrench (pour une exp professionnelle)
   * education (pour un diplôme)
+* De plus, si vous le souhaitez vous pouvez placer votre CV dans web/bundles/cv/doc/cv_[nom_cv].doc et/ou web/bundles/cv/doc/cv_[nom_cv].pdf. Dans le cas contraire rien ne s'afichera.
 
 ```
 {
+  "home": {
+    "title" : "...",
+    "steps" : [
+      "...",
+      ...
+    ]
+  },
+  "nom_cv" : "par ex si vous placez un cv nommé cv_toto.pdf dans web/bundles/cv/doc/, mettez ici cv_toto",
   "cv" : [
      {
-        "title" : "",
+        "title" : "...",
         "type" : "picture | wrench | education",
-        "subtitle" : "",
-        "date" : "",
-        "photo_url" : "",
-        "caption" : "",
+        "subtitle" : "...",
+        "date" : "...",
+        "photo_url" : "http://...",
+        "caption" : "...",
         "data": {
-          "body" : "",
-          "steps" : [
-            "step 1",
-            "step 2",
-            ...
-         ]
+          "body" : "...",
+          "steps" : [...]
         },
-        "more" : "link to a website"
+        "more" : "http://..."
      },
      ...
   ],
-  "exp" : [
+  "experience" : [
     {
-      "name" : "J2ee",
-      "percent" : "80%"
+      "title" : "Java / J2ee",
+      "modules" : [
+        {
+          "name" : "J2ee",
+          "percent" : "90"
+        },
+        {
+          "name" : "Hibernate",
+          "percent" : "80"
+        },
+        ...
+      ]
     },
     ...
   ]

@@ -13,12 +13,24 @@
     <link href="{{ asset('bundles/cv/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('bundles/cv/css/timeline.css') }}" rel="stylesheet">
     
-    <script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+    <script src="{{ asset('bundles/cv/js/modernizr.js') }}" type="text/javascript"></script>
     <script src="{{ asset('bundles/cv/js/jquery-2.1.4.min.js') }}"></script>
     <script src="{{ asset('bundles/cv/js/bootstrap.js') }}"></script>
     <script src="{{ asset('bundles/cv/js/handlebars-v4.0.2.js') }}"></script>
     <script src="{{ asset('bundles/cv/js/ie10-viewport-bug-workaround.js') }}"></script>
+    
+    {% if app.request.attributes.get('_route') == 'bnccv_home' %}
+    <script src="{{ asset('bundles/cv/js/home.js') }}"></script>
+    {% endif %}
+    
+    {% if app.request.attributes.get('_route') == 'bnccv_cv' %}
     <script src="{{ asset('bundles/cv/js/timeline.js') }}"></script>
+    {% endif %}
+    
+    {% if app.request.attributes.get('_route') == 'bnccv_exp' %}
+    <script src="{{ asset('bundles/cv/js/exp.js') }}"></script>
+    {% endif %}
+    
   </head>
 
   <body>
