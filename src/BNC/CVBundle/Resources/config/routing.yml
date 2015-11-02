@@ -1,5 +1,5 @@
 bnccv_home:
-    path:     /home
+    path:     /
     defaults: { _controller: BNCCVBundle:Default:index }
 
 bnccv_cv:
