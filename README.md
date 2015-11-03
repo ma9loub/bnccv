@@ -70,3 +70,11 @@ Pour les données de la présentation générale, du CV et de l'expérience il y
   ]
 }
 ```
+
+# Installation
+C'est un projet symfony qui utilise composer.phar pour gérer les dépendances du projet. Pour récupérer les dépendances, il faut tout d'abord récupérer le composer puis l'exécuter :
+* curl -s https:/ /getcomposer.org/installer | php
+** ou avec 1and1: curl -sS https://getcomposer.org/installer | /usr/bin/php5.5-cli
+* php composer.phar install
+** avec 1and1: /usr/bin/php5.5-cli composer.phar install
+
