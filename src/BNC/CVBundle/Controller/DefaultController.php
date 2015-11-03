@@ -4,6 +4,12 @@ namespace BNC\CVBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Home page
+ * 
+ * @author tareum
+ *
+ */
 class DefaultController extends Controller
 {
     public function indexAction()
